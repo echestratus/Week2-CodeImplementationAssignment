@@ -1,7 +1,7 @@
 // Palindrome detection
 function palindromeDetection(string) {
     if (typeof (string) !== "string") {
-        return "Please input string data type!!!";
+        throw new Error("Please input string data type!!!");
     } else {
         string = string.toLowerCase();
         let temp = "";
@@ -16,13 +16,19 @@ function palindromeDetection(string) {
     }
 
 }
-let string = "Kasur Rusak";
-console.log("Title: Palindrome Detection\n" + string + " " + palindromeDetection(string) + "\n");
+
+try {
+    let string = "Kasur Rusak";
+    console.log("Title: Palindrome Detection\n" + string + " " + palindromeDetection(string) + "\n");
+} catch (error) {
+    console.log(error.message);
+}
+
 
 // Reverse Words
 let reverseWord = function (words) {
     if (typeof (words) !== "string") {
-        return "Please input string data type!!!";
+        throw new Error("Please input string data type!!!");
     } else {
         let reversed = words.split(" ").reverse().join(" ");
         return reversed;
@@ -30,7 +36,13 @@ let reverseWord = function (words) {
 
 }
 
-let words = "Javascript belajar Saya";
-console.log("Title: Reverse Words\n" + words + "\nReversed = " + reverseWord(words));
+try {
+    let words = "Javascript belajar Saya";
+    console.log("Title: Reverse Words\n" + words + "\nReversed = " + reverseWord(words));
+} catch (error) {
+    console.log(error.message);
+}
+
+
 
 
